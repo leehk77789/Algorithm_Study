@@ -16,5 +16,6 @@ public class B11721 {
 				continue;
 			}
 		}
+		sc.close();
 	}
 }
