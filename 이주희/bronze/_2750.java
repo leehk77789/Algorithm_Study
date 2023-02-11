@@ -23,6 +23,9 @@ public class _2750 {
 	
 	for(int i=0; i<arr.length; i++) {
 	System.out.println(arr[i]);
+	
+	long regNo =9807643223232L;
+	System.out.println(regNo);
 	}
 	}
 }
