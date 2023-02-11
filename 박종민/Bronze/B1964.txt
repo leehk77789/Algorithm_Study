@@ -1,0 +1,25 @@
+package backJoon;
+
+import java.util.Scanner;
+
+public class B1964 {
+	public static void main(String[] args) {
+
+		int result = 5;
+		int deongCha = 0;
+
+		Scanner sc = new Scanner(System.in);
+
+		int stage = sc.nextInt();
+		if (stage == 1) {
+			System.out.println(5);
+		} else {
+			for (int i = 1; i < stage; i++) {
+				result = (result + (i + 2) * 3 - 2)%45678;
+			}
+
+			System.out.println(result);
+		}
+
+	}
+}
