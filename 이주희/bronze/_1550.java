@@ -39,9 +39,8 @@ public class _1550 {
 			break;
 			
 			}
-//	System.out.println(arr2[i]);
+
 			sum+=arr2[i]*Math.pow(16,arr.length-1-i);
-			//System.out.println(sum);
 			
 		}		
 		System.out.println(sum);
