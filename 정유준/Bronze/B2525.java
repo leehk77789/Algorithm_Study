@@ -25,5 +25,6 @@ public class B2525 {
 		}
 		System.out.println(A + " " + time);
 		
+		sc.close();
 	}
 }

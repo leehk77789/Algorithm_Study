@@ -17,5 +17,7 @@ public class B2588 {
 		System.out.println(d);
 		System.out.println(e);
 		System.out.println(f);
+
+		sc.close();
     }
 }
