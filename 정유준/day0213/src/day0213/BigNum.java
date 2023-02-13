@@ -31,7 +31,7 @@ public class BigNum {
 			}
 			System.out.println("#" + (i+1) + " " + max);
 		}
-		
+		sc.close();
 	}
 }
 

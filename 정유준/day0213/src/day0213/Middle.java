@@ -32,5 +32,6 @@ public class Middle {
 			//총합 에서 최대값, 최소값 뺀 개수인 8나누기
 			System.out.println("#" + (i+1) + " " + Math.round(sum/8));
 		}
+		sc.close();
 	}
 }
