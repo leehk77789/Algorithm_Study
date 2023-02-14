@@ -7,34 +7,33 @@ public class B2309 {
 		Scanner sc = new Scanner(System.in);
 		//키 입력받을 배열 생성
 		int[] he = new int[9];
-		int[] result = new int[7];
 		//키 입력
 		for(int i = 0; i < he.length; i++) {
 			he[i] = sc.nextInt();
 		}
 		
+		//전체 총합을 구한뒤
 		int sumhe = 0;
 		for(int i = 0; i < he.length; i++) {
 			sumhe += he[i];
 		}
 		
-		for(int i = 0; i < he.length; i++) {
-			for(int j = i; j < he.length; j++) {
+		//he에서 2개를 뺐을 때 100이 되는 원소들을 10000으로 바꾸고
+		//for문 전체 break
+		outer:for(int i = 0; i < he.length; i++) {
+			for(int j = i+1; j < he.length; j++) {
 				if(sumhe - he[i] - he[j] == 100) {
-					he[i] = 0;
-					he[j] = 0;
-				}
-				for(int z = 0; z < result.length; z++) {
-					if(he[i] != 0 && he[j] != 0) {
-						result[z] = he[j];
-					}
+					he[i] = 101;
+					he[j] = 101;
+					break outer;
 				}
 			}
 		}
 		
-		Arrays.sort(result);
-		for(int i = 0; i < result.length; i++) {
-			System.out.println(result[i]);
+		Arrays.sort(he);
+		//짭쟁이들을 10000으로 바꿨으므로 length-2를 하면 해당 2개를 제외하고 나옴
+		for(int i = 0; i < he.length-2; i++) {
+			System.out.println(he[i]);
 		}
 		
 		sc.close();
