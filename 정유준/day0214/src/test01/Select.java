@@ -11,7 +11,7 @@ public class Select {
 	private static int select(int[] nums, int k) {
 		for(int i=0; i<k; i++) {
 			int minIdx = i;
-			for(int j=i+1; j<k; j++) {
+			for(int j=i+1; j<nums.length; j++) {
 				if(nums[minIdx] > nums[j]) {
 					minIdx = j;
 				}
@@ -21,6 +21,6 @@ public class Select {
 			nums[i] = nums[minIdx];
 			nums[minIdx] = temp;
 		}
-		return nums[k];
+		return nums[k - 1];
 	}
 }
