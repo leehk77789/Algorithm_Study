@@ -65,5 +65,6 @@ public class 달팽이숫자 {
 
 	public static void main(String[] args) {
 		solve();
+		sc.close();
 	}
 }
