@@ -13,6 +13,7 @@ public class Main {
 		for (int i = 1; i < N; i++) {
 			arr[i] = 0; // 모든 요소값을 0으로 초기화한다.
 		}
+		
 
 		int i = 0; // 처음 시작하는 자리 #.
 		int count = 0; // 공을 몇 번이나 던질까요? 
