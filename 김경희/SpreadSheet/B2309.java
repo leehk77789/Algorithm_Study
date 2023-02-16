@@ -15,7 +15,6 @@ public class Main {
 			sum += heights[i];
 		}
 		
-		
 		int fake1 = 0; // 가짜들의 인덱스를 구할 것입니댜.
 		int fake2 = 0;
 		for (int i = 0; i < 8; i++) { // i랑 j랑 짝지어서 전체에서 빼면 100이 되나 보겠습니다.
