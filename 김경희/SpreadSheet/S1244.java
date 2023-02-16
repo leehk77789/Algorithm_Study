@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 
+
+		
 		Scanner sc = new Scanner(System.in);
 
 		int qttOfSwitch = sc.nextInt(); // 스위치 개수 입력받기
