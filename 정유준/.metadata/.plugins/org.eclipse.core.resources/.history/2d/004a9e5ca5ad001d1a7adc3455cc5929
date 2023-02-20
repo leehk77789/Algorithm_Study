@@ -1,0 +1,37 @@
+package day2016;
+
+import java.util.Scanner;
+
+public class SWEA_Test {
+	static Scanner sc = new Scanner(System.in);
+	static int[][] ladder = new int[100][100];
+	static int[] xWay = { 0, 1, -1 };
+	static int[] yWay = { 1, 0, 0 };
+	static int direction = 0;
+	static int x;
+	static int y;
+	static int answer;
+
+	static void input() {
+		int testCase = sc.nextInt();
+		for (int yidx = 0; yidx < 100; yidx++) {
+			for (int xidx = 0; xidx < 100; xidx++) {
+				ladder[yidx][xidx] = sc.nextInt();
+			}
+		}
+		
+		for (int yidx = 0; yidx < 100; yidx++) {
+			for (int xidx = 0; xidx < 100; xidx++) {
+				System.out.print(ladder[yidx][xidx]);
+			}
+		}
+		
+	}
+
+	
+
+	public static void main(String[] args) {
+		solve();
+		sc.close();
+	}
+}

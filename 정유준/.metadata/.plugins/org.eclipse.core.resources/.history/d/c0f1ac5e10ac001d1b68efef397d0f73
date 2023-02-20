@@ -1,0 +1,12 @@
+package day0213;
+
+//테스트 케이스 10개로 고정
+//각 테스트 케이스마다 빌딩의 개수를 입력받는다
+// 빌딩의 개수만큼 배열을 생성 -> 빌딩 높이 입력받기
+// 빌딩의 높이를 입력받아서 배열에 저장
+public class ViewAnswer {
+
+	public static void main(String[] args) {
+		
+	}
+}

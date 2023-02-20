@@ -1,0 +1,14 @@
+package test01;
+
+public class Test3 {
+
+	public static void main(String[] args) {
+		int num = atoi("1234");
+	}
+
+	private static int atoi(String string) {
+		char[] arr = string.toCharArray();
+		int value = 0;
+		return 0;
+	}
+}

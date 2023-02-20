@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class B2309 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//키 입력받을 배열 생성
+		int[] he = new int[9];
+		//키 입력
+		for(int i = 0; i < he.length; i++) {
+			he[i] = sc.nextInt();
+		}
+		sc.close();
+	}
+}

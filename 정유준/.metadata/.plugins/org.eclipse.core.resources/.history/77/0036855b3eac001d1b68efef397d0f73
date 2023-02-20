@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class B2798 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int cardNum = sc.nextInt();
+		int dealerNum = sc.nextInt();
+		int[] cardArr= new int[cardNum];
+		
+		//카드값 입력받기
+		for(int idx = 0; idx < cardNum; idx++) {
+			cardArr[i] = sc.nextInt();
+		}
+		
+		
+	}
+}

@@ -1,0 +1,26 @@
+package day0220;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+		for (int t = 1; t <= T; t++) {
+			int ans = 0;
+			String str = sc.next();
+			int len = str.length();
+			int min = 10;
+			for (int i = 10; i >= 1; i--) {
+				String tmp = str.substring(0, i);
+				String tmp2 = str.substring(i, 2 * i);
+				if (tmp.equals(tmp2) && min > i)
+					min = i;
+			}
+			System.out.printf("#%d %d\n", t, min);
+		}
+		sc.close();
+	}
+
+}

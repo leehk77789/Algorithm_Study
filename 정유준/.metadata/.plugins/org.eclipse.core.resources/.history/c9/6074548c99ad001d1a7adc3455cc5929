@@ -1,0 +1,12 @@
+package test02;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		int[] arr = {5, 2, 4, 1, 2, 3, 3};
+		
+		//counting 배열
+		//count[i] : i의 개수
+		
+	}
+}

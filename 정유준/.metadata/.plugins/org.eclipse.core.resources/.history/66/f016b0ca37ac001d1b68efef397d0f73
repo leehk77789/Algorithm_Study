@@ -1,0 +1,52 @@
+package day0214;
+
+import java.util.Scanner;
+
+public class Flatten {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		for (int idx = 1; idx < 11; idx++) {
+			int dump = sc.nextInt();
+			int dumpCount = 0;
+			
+			int[] dumpheight = new int[100];
+			
+			for(int row = 0; row < 100; row++) {
+				dumpheight[row] = sc.nextInt();
+			}
+			
+			while(dumpCount == dump) {
+				for(int row = 0; row < 100; row++) {
+					int max = 0;
+					int min = 101;
+					int maxIdx = 0;
+					int minIdx = 0;
+					if(dumpheight[row] > max) {
+						max = dumpheight[row];
+					}
+					if(dumpheight[row] < min) {
+						min = dumpheight[row];
+					}
+					dumpheight[max]--;
+					dumpheight[min]++;
+					dumpCount++;
+				}
+			}
+			
+			int max = 0;
+			int min = 101;
+			for(int row = 0; row < 100; row++) {
+				if(dumpheight[row] > max) {
+					max = dumpheight[row];
+				}
+				if(dumpheight[row] < min) {
+					min = dumpheight[row];
+				}
+			}
+			System.out.println("#" + idx + " " + (max-min));
+		}
+		sc.close();
+	}
+}

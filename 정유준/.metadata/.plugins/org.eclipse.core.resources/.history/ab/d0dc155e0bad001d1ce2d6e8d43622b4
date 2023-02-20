@@ -1,0 +1,17 @@
+package day0215;
+
+import java.util.Scanner;
+
+public class Sum {
+
+static Scanner sc= new Scanner(System.in);
+static int arr[][] = new int[100][100];
+
+static void input() {
+	arr = new int[100][100];
+	for(int idx = 0; )
+}
+	public static void main(String[] args) {
+
+	}
+}

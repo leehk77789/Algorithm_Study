@@ -1,0 +1,100 @@
+package day0217;
+
+import java.util.Scanner;
+
+public class SWEA_1216_회문2_정유준 {
+
+	static Scanner sc = new Scanner(System.in);
+
+	static int maxCount;
+
+	static char[][] charPan = new char[100][100];
+
+	static String checkRow;
+	static String checkCol;
+
+	static int strLength;
+
+	static void input() {
+		int testCase = sc.nextInt();
+
+		// 배열 값 채우기
+		for (int i = 0; i < 100; i++) {
+			charPan[i] = sc.next().toCharArray();
+		}
+	}
+
+	static void findMax() {
+		strLength = 3;
+		while (strLength != 100) {
+			outer: for (int row = 0; row < 100; row++) {
+				for (int col = 0; col < 100; col++) {
+					makeColStr(row, col);
+					makeRowStr(row, col);
+					if (checkReverse(checkRow) > maxCount) {
+						maxCount = checkReverse(checkRow);
+					}
+
+					if (checkReverse(checkCol) > maxCount) {
+						maxCount = checkReverse(checkCol);
+					}
+
+					if (maxCount == strLength) {
+						strLength++;
+						row = 0;
+						col = 0;
+						break outer;
+					}
+				}
+			}
+			strLength++;
+		}
+	}
+
+	static void makeColStr(int row, int col) {
+		checkCol = "";
+		for (int idx = 0; idx < strLength; idx++) {
+			checkCol += charPan[row][col];
+			if (col + 1 < 100) {
+				col++;
+			} else {
+				break;
+			}
+		}
+	}
+
+	static void makeRowStr(int row, int col) {
+		checkRow = "";
+		for (int idx = 0; idx < strLength; idx++) {
+			checkRow += charPan[row][col];
+			if (row + 1 < 100) {
+				row++;
+			} else {
+				break;
+			}
+		}
+	}
+
+	static int checkReverse(String str) {
+		// 로꾸꺼 하나 만들기
+		String reverseTestString = new StringBuilder(str).reverse().toString();
+		// 거꾸로 뒤집은거랑 비교
+		if (str.equals(reverseTestString)) {
+			return str.length();
+		} else {
+			return maxCount;
+		}
+	}
+
+	static void solve() {
+		for (int idx = 1; idx <= 10; idx++) {
+			input();
+			findMax();
+			System.out.println("#" + idx + " " + maxCount);
+		}
+	}
+
+	public static void main(String[] args) {
+		solve();
+	}
+}

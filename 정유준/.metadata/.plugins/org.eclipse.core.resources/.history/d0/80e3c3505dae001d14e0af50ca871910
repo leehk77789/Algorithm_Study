@@ -1,0 +1,20 @@
+package test01;
+
+public class Test4 {
+
+	public static void main(String[] args) {
+		// 문자열 뒤집기
+
+		// 1.swap
+		String str = "삼성청년SW아카데미";
+		char[] arr = str.toCharArray();
+
+		// 2.길이의 반 만큼만 반복
+		for (int i = 0; i < arr.length / 2; i++) {
+			// swap
+			char temp = arr[i];
+			arr[i] = arr[arr.length - 1 - i];
+			arr[arr.length - 1 - i] = temp;
+		}
+	}
+}

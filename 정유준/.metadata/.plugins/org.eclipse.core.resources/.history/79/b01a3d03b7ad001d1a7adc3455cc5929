@@ -1,0 +1,12 @@
+package day2016;
+
+public class LadderAnswer {
+	static int[] ewltaRow = { -1, 0, 0 };
+	static int[] deltaCol = { 0, -1, 1 };
+
+	static final int UP = 0;
+
+	public static void main(String[] args) {
+		// 도착점부터 시작하면 한번에 답을 알 수 있다.
+	}
+}

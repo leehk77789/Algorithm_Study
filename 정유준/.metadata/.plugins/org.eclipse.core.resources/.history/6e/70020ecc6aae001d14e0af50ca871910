@@ -1,0 +1,19 @@
+package day0217;
+
+import java.util.Scanner;
+
+public class SWEA_1215_회문1_정유준 {
+
+	static Scanner sc = new Scanner(System.in);
+	// 문자판
+	static char[][] charPan;
+	//회문 조건 개수
+	static int check;
+	static void input() {
+		
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

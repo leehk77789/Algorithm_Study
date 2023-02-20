@@ -1,0 +1,57 @@
+package day0215;
+
+import java.util.Scanner;
+
+public class 달팽이숫자 {
+	static Scanner sc = new Scanner(System.in);
+	static int arr[][];
+	static int snailSize;
+	static int[] xMove = {1, 0, -1, 0};
+	static int[] yMove = {0, -1, 0, 1};
+	
+	static void input() {
+		// 달팽이의 크기
+		snailSize = sc.nextInt();
+	}
+	
+	static void moveSnail() {
+		int x = 0;
+		int y = 0;
+		int count = 0;
+		int directionChoice = 0;
+		
+		while(count <= (snailSize * snailSize)) {
+			arr[x][y] = count;
+			count++;
+			x += xMove[directionChoice];
+			y += yMove[directionChoice];
+			
+			if(x > snailSize-1 || y > snailSize-1 || x < 0 || y < 0) {
+				x -= xMove[directionChoice];
+				y -= yMove[directionChoice];
+				
+				if(directionChoice == 3) { 
+					directionChoice = 0;
+				} else {
+					directionChoice++;
+				}
+				
+				x += xMove[directionChoice];
+				y += yMove[directionChoice];
+			}
+		}
+	}
+	
+	public void solve() {
+		int testCase = sc.nextInt();
+		for(int i = 1; i <= testCase; i++) {
+			input();
+			moveSnail();
+			System.out.println("#" + testCase);
+		}
+	}
+
+	public static void main(String[] args) {
+		solve();
+	}
+}

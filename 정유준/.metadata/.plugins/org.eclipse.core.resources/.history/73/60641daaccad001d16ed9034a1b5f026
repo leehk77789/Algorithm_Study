@@ -1,0 +1,26 @@
+package day2016;
+
+import java.util.Scanner;
+
+public class SWEA_2001_파리퇴치_정유준 {
+
+	static Scanner sc = new Scanner(System.in);
+	static int arrSize;
+	static int dmgSize;
+
+	static void input() {
+		arrSize = sc.nextInt();
+		dmgSize = sc.nextInt();
+	}
+
+	static void solve() {
+		int testCase = sc.nextInt();
+		for (int idx = 1; idx <= testCase; idx++) {
+
+		}
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

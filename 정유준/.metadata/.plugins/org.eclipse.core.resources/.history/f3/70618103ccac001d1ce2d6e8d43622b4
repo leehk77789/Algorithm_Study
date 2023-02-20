@@ -1,0 +1,26 @@
+package test02;
+
+public class Test1_Babygin {
+
+	public static void main(String[] args) {
+		// divide and conquer
+		// 분할정복
+		// 서로 다른 n개 중에서 r개 뽑는 순열
+		int[] arr = { 2, 5, 8, 9 };
+
+		// 서로 다른 n개 중에서 3개를 뽑는 순열
+
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr.length; j++) {
+				if (j != i) {
+					for (int k = 0; k < arr.length; k++) {
+						if (k != i && k != j) {
+							//여기에서 모든 경우의 수가 만들어진다.
+						}
+					}
+				}
+			}
+		}
+	}
+	//run을 체크하는 메서드
+}

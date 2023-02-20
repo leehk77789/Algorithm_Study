@@ -1,0 +1,12 @@
+package day0215;
+
+import java.util.Scanner;
+
+public class Sum {
+
+static Scanner sc= new Scanner(System.in);
+static int arr[][];
+	public static void main(String[] args) {
+
+	}
+}

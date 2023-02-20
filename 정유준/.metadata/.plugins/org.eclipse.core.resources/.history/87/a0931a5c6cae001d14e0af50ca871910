@@ -1,0 +1,50 @@
+package day0217;
+
+import java.util.Scanner;
+
+public class SWEA_1215_회문1_정유준 {
+
+	static Scanner sc = new Scanner(System.in);
+	// 문자판
+	static char[][] charPan = new char[8][8];
+	// 회문 조건 개수
+	static int check;
+
+	// 상하좌우 4방향 탐색
+	static int[] deltaRow = { -1, 0, 1, 0 };
+	static int[] deltaCol = { 0, 1, 0, -1 };
+
+	static void input() {
+		// 회문 조건 개수 입력받기
+		check = sc.nextInt();
+
+		// 글자판 채우기
+		for (int row = 0; row < 8; row++) {
+			String inputStr = sc.next();
+			for (int col = 0; col < 8; col++) {
+				charPan[row][col] = inputStr.charAt(col);
+			}
+		}
+
+//		// 확인(완료)
+//		for (int row = 0; row < 8; row++) {
+//			for (int col = 0; col < 8; col++) {
+//				System.out.print(charPan[row][col]);
+//			}
+//			System.out.println();
+//		}
+	}
+
+	static void checkSame() {
+		for (int row = 0; row < 8; row++) {
+			for (int col = 0; col < 8; col++) {
+				for(int direction = 0; direction < 4; direction++) {
+					
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+	}
+}

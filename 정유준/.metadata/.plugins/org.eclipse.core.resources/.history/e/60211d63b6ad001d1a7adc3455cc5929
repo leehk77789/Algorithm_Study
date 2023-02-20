@@ -1,0 +1,8 @@
+package day2016;
+
+public class LadderAnswer {
+	
+	public static void main(String[] args) {
+		//도착점부터 시작하면 한번에 답을 알 수 있다.
+	}
+}

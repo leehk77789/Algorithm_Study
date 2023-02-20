@@ -1,0 +1,33 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class B2309 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//키 입력받을 배열 생성
+		int[] he = new int[9];
+		int[] result = new int[7];
+		//키 입력
+		for(int i = 0; i < he.length; i++) {
+			he[i] = sc.nextInt();
+		}
+		
+		int sumhe = 0;
+		for(int i = 0; i < he.length; i++) {
+			sumhe += he[i];
+		}
+		
+		for(int i = 0; i < he.length; i++) {
+			for(int j = i; j < he.length; j++) {
+				if(sumhe - he[i] - he[j] == 100) {
+					he[i] = 10000;
+					he[j] = 10000;
+					break outer;
+				}
+			}
+		}
+		
+		sc.close();
+	}
+}

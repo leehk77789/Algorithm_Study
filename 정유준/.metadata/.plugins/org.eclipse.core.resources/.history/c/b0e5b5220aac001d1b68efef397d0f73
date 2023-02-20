@@ -1,0 +1,8 @@
+package test04;
+
+public class Test4_2zinSearch {
+
+	public static void main(String[] args) {
+		int[] A = {2, 4, 7, 9, 11, 19, 23};
+	}
+}

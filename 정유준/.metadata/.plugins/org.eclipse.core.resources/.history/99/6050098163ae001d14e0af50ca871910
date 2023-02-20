@@ -1,0 +1,29 @@
+package test02;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		char[] t = "This iss a book".toCharArray();
+		char[] p = "iss".toCharArray();
+
+		int idx = BruteForceFor(p, t);
+	}
+
+	private static int BruteForceFor(char[] p, char[] t) {
+		int n = t.length;
+		int m = p.length;
+		for (int i = 0; i < n - m + 1; i++) {
+			boolean flag = true;
+			for (int j = 0; j < m; j++) {
+				if (p[j] != t[i + j]) {
+					flag = false;
+					break;
+				}
+			}
+			if(flag) {
+				return i;
+			}
+		}
+		return -1;
+	}
+}

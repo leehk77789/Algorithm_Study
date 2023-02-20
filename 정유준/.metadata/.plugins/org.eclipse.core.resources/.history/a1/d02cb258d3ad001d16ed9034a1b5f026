@@ -1,0 +1,11 @@
+package Silver;
+
+import java.util.Scanner;
+
+public class BOJ_2477_참외밭_정유준 {
+	static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		solve();
+	}
+}

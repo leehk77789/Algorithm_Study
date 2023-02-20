@@ -1,0 +1,8 @@
+package day0214;
+
+public class 중간값찾기 {
+
+	public static void main(String[] args) {
+
+	}
+}
