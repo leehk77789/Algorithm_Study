@@ -1,8 +1,0 @@
-package day0214;
-
-public class 최빈수구하기 {
-
-	public static void main(String[] args) {
-
-	}
-}

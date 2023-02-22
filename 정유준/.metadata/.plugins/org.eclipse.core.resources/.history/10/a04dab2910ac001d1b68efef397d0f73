@@ -1,8 +1,0 @@
-package day0213;
-
-public class ViewAnswer {
-
-	public static void main(String[] args) {
-
-	}
-}
