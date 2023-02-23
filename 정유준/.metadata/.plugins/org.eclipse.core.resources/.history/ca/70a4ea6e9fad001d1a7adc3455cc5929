@@ -1,0 +1,8 @@
+package day2016;
+
+public class SWEA_1210_Ladder1_정유준 {
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+
+	}
+}

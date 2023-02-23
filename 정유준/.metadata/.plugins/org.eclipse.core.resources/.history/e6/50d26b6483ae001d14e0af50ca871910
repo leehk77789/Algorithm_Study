@@ -1,0 +1,23 @@
+package day0217;
+
+import java.util.Scanner;
+
+public class SWEA_1216_회문2_정유준 {
+
+	static Scanner sc = new Scanner(System.in);
+
+	static int maxCount;
+
+	static char[][] charPan = new char[100][100];
+
+	static void input() {
+		int testCase = sc.nextInt();
+		for (int i = 0; i < 100; i++) {
+			charPan[i] = sc.next().toCharArray();
+		}
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

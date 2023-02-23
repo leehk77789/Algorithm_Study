@@ -1,0 +1,8 @@
+package day0220;
+
+public class MakeStack {
+
+	public static void main(String[] args) {
+
+	}
+}

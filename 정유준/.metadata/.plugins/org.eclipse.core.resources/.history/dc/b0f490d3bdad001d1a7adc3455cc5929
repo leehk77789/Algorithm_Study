@@ -1,0 +1,35 @@
+package day2016;
+
+import java.util.Scanner;
+
+class SWEA_11315_오목판정_정유준 {
+	static Scanner sc = new Scanner(System.in);
+	static int count;
+	static char[][] omokPan;
+
+	static void input() {
+		int panSize = sc.nextInt();
+		for (int row = 0; row < panSize; row++) {
+			for (int col = 0; col < panSize; col++) {
+				omokPan[row][col] = sc.next().charAt(col);
+			}
+		}
+	}
+
+	static void findWin() {
+		while (count != 5) {
+
+		}
+	}
+
+	static void solve() {
+		int testCase = sc.nextInt();
+		for (int tc = 1; tc <= testCase; tc++) {
+
+		}
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int cardNum = sc.nextInt();
+		int targetNum = sc.nextInt();
+
+		int[] arr = new int[cardNum];
+
+		for (int idx = 0; idx < cardNum; idx++) {
+			arr[idx] = sc.nextInt();
+		}
+		int combination = 0;
+
+		for (int fCard = 0; fCard < cardNum - 2; fCard++) {
+			for (int sCard = fCard + 1; sCard < cardNum - 1; sCard++) {
+				for (int tCard = sCard + 1; tCard < cardNum; tCard++) {
+					if (arr[fCard] + arr[sCard] + arr[tCard] <= targetNum) {
+						if (arr[fCard] + arr[sCard] + arr[tCard] > combination) {
+							combination = arr[fCard] + arr[sCard] + arr[tCard];
+						}
+
+					}
+				}
+			}
+		}
+
+		if (combination > 0) {
+			System.out.println(combination);
+		}
+		sc.close();
+	}
+}

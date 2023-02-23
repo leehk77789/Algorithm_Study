@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// 스캐너
+		Scanner sc = new Scanner(System.in);
+		// 테스트 횟수 받기
+		int testCase = sc.nextInt();
+		// 테스트 횟수 만큼 for문 돌리기
+		for (int test = 1; test <= testCase; test++) {
+			// 문자 받고
+			String quiz = sc.next();
+			// 문자를 char 배열에 입력
+			char[] quizArr = new char[quiz.length()];
+			for (int idx = 0; idx < quiz.length(); idx++) {
+				quizArr[idx] = quiz.charAt(idx);
+			}
+			// 전체 점수 카운트할 변수
+			int max = 0;
+			// 각 맞은 문제의 점수를 카운트할 변수
+			int cnt = 0;
+			// for문으로 점수 계산
+			for (int idx = 0; idx < quiz.length(); idx++) {
+				if (quizArr[idx] == 'O') {
+					cnt++;
+					max += cnt;
+				} else {
+					cnt = 0;
+				}
+
+			}
+			// 정답 출력
+			System.out.println(max);
+
+		}
+
+	}
+}

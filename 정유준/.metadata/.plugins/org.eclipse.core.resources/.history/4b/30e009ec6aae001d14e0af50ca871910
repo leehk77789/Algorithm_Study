@@ -1,0 +1,21 @@
+package day0217;
+
+import java.util.Scanner;
+
+public class SWEA_1215_회문1_정유준 {
+
+	static Scanner sc = new Scanner(System.in);
+	// 문자판
+	static char[][] charPan = new char[8][8];
+	// 회문 조건 개수
+	static int check;
+
+	static void input() {
+		check = sc.nextInt();
+		for(int i)
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

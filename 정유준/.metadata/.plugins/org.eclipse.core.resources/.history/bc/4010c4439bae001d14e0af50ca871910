@@ -1,0 +1,24 @@
+package day0217;
+
+import java.util.Scanner;
+
+public class SWEA_1213_String_정유준 {
+
+	static Scanner sc = new Scanner(System.in);
+
+	public void input() {
+		int testCase = sc.nextInt();
+		String original = sc.next();
+		String compare = sc.next();
+		char[] t = original.toCharArray();
+		char[] p = compare.toCharArray();
+	}
+
+	public static int BruteForceWhilt(char[])
+
+	private static int BruteForceWhile()
+
+	public static void main(String[] args) {
+
+	}
+}
