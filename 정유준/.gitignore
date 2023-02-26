@@ -16,6 +16,7 @@ local.properties
 *.log
 *.project
 *.classpath
+*.class
 
 # External tool builders
 .externalToolBuilders/
