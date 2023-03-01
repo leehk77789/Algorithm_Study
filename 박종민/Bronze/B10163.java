@@ -1,40 +1,42 @@
-import java.util.*;
-public class 백준10163색종이 {
+import java.util.Scanner;
+public class Main {
 
 	public static void main(String[] args) {
-		
+		// 스캐너
 		Scanner sc = new Scanner(System.in);
-		int recnum = sc.nextInt();
-		
-		int[][] rec = new int[recnum][4];
-		
-		for(int i=0; i<recnum; i++) {
+		// 종이 개수 받기
+		int num = sc.nextInt();
+		// 종이 배열 만들기
+		int[][] paper = new int[num][4];
+		// 종이 입력
+		for(int i=0; i<num; i++) {
 			for(int j=0; j<4; j++) {
-				rec[i][j] = sc.nextInt();
+				paper[i][j] = sc.nextInt();
 			}
 		}
-		
-		int[][] std = new int[1001][1001];
-		
-		for(int i=0; i<recnum; i++) {	
-			for(int j=rec[i][0]; j<rec[i][0]+rec[i][2]; j++) {
-				for(int k=rec[i][1]; k<rec[i][1]+rec[i][3]; k++) {
-					std[j][k] = i+1;
+		//도화지 만들기
+		int[][] map = new int[1001][1001];
+		// 도화지에 종이 입력
+		for(int i=0; i<num; i++) {	
+			for(int j=paper[i][0]; j<paper[i][0]+paper[i][2]; j++) {
+				for(int k=paper[i][1]; k<paper[i][1]+paper[i][3]; k++) {
+					map[j][k] = i+1;
 				}
 			}
 		}
-		
-		for(int k=1; k<=recnum; k++) {
+		// 각 종이 합 계산
+		for(int k=1; k<=num; k++) {
 			int sum = 0;
 			for(int i=0; i<1001; i++) {
 				for(int j=0; j<1001; j++) {
-					if(std[i][j]==k)sum++;
+					if(map[i][j]==k){
+						sum++;
+					}	
 				}
 			}
+			// 출력
 			System.out.println(sum);
 		}
-		
-		//for(int[] a: std)System.out.println(Arrays.toString(a));
 		
 	}
 
