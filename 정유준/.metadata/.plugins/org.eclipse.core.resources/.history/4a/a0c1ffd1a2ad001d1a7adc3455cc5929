@@ -1,0 +1,54 @@
+package day2016;
+
+import java.util.Scanner;
+
+public class SWEA_1210_Ladder1_정유준 {
+	static Scanner sc = new Scanner(System.in);
+	static int[][] ladder = new int[100][100];
+	static int[] xWay = { 0, 1, -1 };
+	static int[] yWay = { 1, 0, 0 };
+	static int direction = 0;
+	static int x;
+	static int y;
+
+	static void input() {
+		int testCase = sc.nextInt();
+		for (int yidx = 0; yidx < 100; yidx++) {
+			for (int xidx = 0; xidx < 100; xidx++) {
+				ladder[yidx][xidx] = sc.nextInt();
+			}
+		}
+	}
+
+	static int findWay() {
+		for (int idx = 0; idx < 100; idx++) {
+			x = idx;
+			y = 0;
+			if (ladder[0][x] == 1) {
+				while (y != 99) {
+
+				}
+			}
+		}
+	}
+
+	static int findDirection() {
+		if (x == 0 && ladder[y][1] == 0) {
+			direction = 0;
+			return direction;
+		} else if (){
+			
+		}
+	}
+
+//	solve() {
+//		for(idx = 1; idx < 11; idx++) {
+//			System.out.println("#" + idx + );
+//		}
+//	}
+
+	public static void main(String[] args) {
+		// solve();
+		sc.close();
+	}
+}

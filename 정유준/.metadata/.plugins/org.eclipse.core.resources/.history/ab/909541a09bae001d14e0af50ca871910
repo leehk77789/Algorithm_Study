@@ -1,0 +1,49 @@
+package day0217;
+
+import java.util.Scanner;
+
+public class SWEA_1213_String_정유준 {
+
+	static Scanner sc = new Scanner(System.in);
+	static char[] t;
+	static char[] p;
+
+	public void input() {
+		int testCase = sc.nextInt();
+		String original = sc.next();
+		String compare = sc.next();
+		t = original.toCharArray();
+		p = compare.toCharArray();
+	}
+
+	static int BruteForceWhilt(char[] p, char[] t) {
+		int n = t.length;
+		int m = p.length;
+		int i = 0;
+		int j = 0;
+		int count = 0;
+
+		while (i < m && j < n) {
+			if (t[i] != p[j]) {
+				i -= j;
+				j = -1;
+			}
+			i++;
+			j++;
+		}
+		if (j == m) {
+			count++;
+		} else {
+			return -1;
+		}
+	}
+
+	static void solve() {
+		input();
+		BruteForceWhilt(null, null)
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

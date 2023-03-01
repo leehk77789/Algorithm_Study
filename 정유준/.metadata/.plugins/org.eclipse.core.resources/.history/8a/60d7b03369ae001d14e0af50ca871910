@@ -1,0 +1,23 @@
+package day0217;
+
+import java.util.Scanner;
+
+public class SWEA_1989_초심자의회문검사_정유준 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int testCase = sc.nextInt();
+		for (int idx = 1; idx <= testCase; idx++) {
+			String isSame = sc.next();
+			char[] compare = isSame.toCharArray();
+			int length = (isSame.length()) / 2;
+			for (int left = 0; left < length; left++) {
+				for (int right = isSame.length() - 1; right >= isSame.length(); right--) {
+					if (isSame[left] = isSame[right]) {
+						break;
+					}
+				}
+			}
+		}
+	}
+}

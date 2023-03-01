@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int numPeople = sc.nextInt();
+		int life = sc.nextInt();
+		int hallding = sc.nextInt();
+		
+		int[] arr = new int[numPeople+1];
+		int cnt=0;
+		
+		arr[1] =1;
+		int idx=1;
+		
+		while(true) {
+			 if (arr[idx]==life) {
+				 break;
+			 }
+			 if (arr[idx]%2==1) {
+				 idx=idx+hallding;
+			 } else {
+				 idx=idx-hallding;
+			 }
+			 if (idx>numPeople) {
+				 idx %=numPeople;
+			 } else if (idx<1) {
+				 idx += numPeople;
+			 }
+			 arr[idx]++;
+			 cnt++;
+		}	 	
+		System.out.println(cnt);
+	}
+}

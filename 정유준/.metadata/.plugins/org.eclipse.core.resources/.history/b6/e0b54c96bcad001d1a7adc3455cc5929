@@ -1,0 +1,16 @@
+package day2016;
+
+import java.util.Scanner;
+
+class SWEA_11315_오목판정_정유준 {
+	static Scanner sc = new Scanner(System.in);
+	static int count;
+
+	static void input() {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

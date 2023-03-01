@@ -1,0 +1,17 @@
+package day0217;
+
+import java.util.Scanner;
+
+public class SWEA_1213_String_정유준 {
+
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		for (int tc = 1; tc <= 10; tc++) {
+			int testCase = sc.nextInt();
+			String checkStr = sc.next();
+			String original = sc.next();
+			int count = 0;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int perCharm = sc.nextInt();
+
+		int[][] arr = new int[6][2];
+
+		for (int row = 0; row < 6; row++) {
+			for (int col = 0; col < 2; col++) {
+				arr[row][col] = sc.nextInt();
+			}
+		}
+		int size = 0;
+
+//		if (arr[0][0] == arr[2][0]) {
+//			if (arr[1][0] == arr[3][0]) {
+//				size = arr[4][1] * arr[5][1] - arr[1][1] * arr[2][1];
+//			} else if (arr[1][0] != arr[3][0]) {
+//				size = arr[3][1] * arr[4][1] - arr[0][1] * arr[1][1];
+//			}
+//		} else if (arr[0][0] != arr[2][0]) {
+//			if (arr[1][0] == arr[3][0]) {
+//				size = arr[0][1] * arr[5][1] - arr[2][1] * arr[3][1];
+//			} else if (arr[1][0] != arr[3][0]) {
+//				size = arr[0][1] * arr[1][1] - arr[3][1] * arr[4][1];
+//			}
+//		}
+		int largeX=0;
+		int largeY=0;
+		
+			if (arr[0][1]>arr[2][1]) {
+				largeX=arr[0][1];
+			} else {
+				largeX=arr[2][1];
+			}
+			if (largeX<arr[4][1]) {
+				largeX=arr[4][1];
+			}
+			
+			if (arr[1][1]>arr[3][1]) {
+				largeY=arr[1][1];
+			} else {
+				largeY=arr[3][1];
+			}
+			if (largeY<arr[5][1]) {
+				largeY=arr[5][1];
+			}
+		
+		size = arr[0][1]*arr[1][1] + arr[1][1]*arr[2][1] + arr[2][1]*arr[3][1] + arr[3][1]*arr[4][1] + arr[4][1]*arr[5][1] + arr[5][1]*arr[0][1]-2*largeX*largeY;
+		
+		int result = size * perCharm;
+		System.out.print(result);
+	}
+}

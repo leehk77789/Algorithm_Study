@@ -1,0 +1,48 @@
+package day2016;
+
+import java.util.Scanner;
+
+public class LadderAnswer {
+	static Scanner sc = new Scanner(System.in);
+	static int[] ewltaRow = { -1, 0, 0 };
+	static int[] deltaCol = { 0, -1, 1 };
+
+	static final int UP = 0;
+	static final int Left = 1;
+	static final int RIGHT = 2;
+
+	static int[][] map;
+
+	static void input() {
+		// 테스트 케이스 번호
+		int testCaseNum = sc.nextInt();
+
+		map = new int[100][100];
+
+		// 종료 위치의 자료를 저장
+		int endRow = 0;
+		int endCol = 0;
+
+		for (int row = 0; row < 100; row++) {
+			for (int col = 0; col < 100; col++) {
+				map[row][col] = sc.nextInt();
+
+				// 종료위치면 해당 위치를 담아둔다.
+				if (map[row][col] == 2) {
+					endRow = row;
+					endCol = col;
+				}
+			}
+		}
+	}
+
+	static void solve() {
+		for (int tc = 1; tc <= 10; tc++) {
+
+		}
+	}
+
+	public static void main(String[] args) {
+		// 도착점부터 시작하면 한번에 답을 알 수 있다.
+	}
+}

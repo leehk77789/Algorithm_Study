@@ -1,0 +1,16 @@
+package day0217;
+
+import java.util.Scanner;
+
+public class SWEA_1213_String_정유준 {
+
+	static Scanner sc = new Scanner(System.in);
+	
+	public void input() {
+		
+	}
+	private static int BruteForceWhile()
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,10 @@
+package day0220;
+
+public class MakeStack {
+	static int[] stack;
+	static int top = -1;
+
+	public static void main(String[] args) {
+
+	}
+}

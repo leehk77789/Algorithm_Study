@@ -1,0 +1,70 @@
+package day0217;
+
+import java.util.Scanner;
+
+public class SWEA_1215_회문1_정유준 {
+
+	static Scanner sc = new Scanner(System.in);
+	// 문자판
+	static char[][] charPan = new char[8][8];
+	// 회문 조건 개수
+	static int check;
+	
+	//조건 개수의 절반만 count하면 됨(중간부터 시작)
+	static int checkHalf;
+
+	// 회문 개수 카운트
+	static int answerCount;
+
+	// 상하좌우 4방향 탐색
+	static int[] deltaRow = { -1, 0, 1, 0 };
+	static int[] deltaCol = { 0, 1, 0, -1 };
+
+	static void input() {
+		// 회문 개수 카운트한거 초기화
+		answerCount = 0;
+
+		// 회문 조건 개수 입력받기
+		check = sc.nextInt();
+
+		// 글자판 채우기
+		for (int row = 0; row < 8; row++) {
+			String inputStr = sc.next();
+			for (int col = 0; col < 8; col++) {
+				charPan[row][col] = inputStr.charAt(col);
+			}
+		}
+
+//		// 확인(완료)
+//		for (int row = 0; row < 8; row++) {
+//			for (int col = 0; col < 8; col++) {
+//				System.out.print(charPan[row][col]);
+//			}
+//			System.out.println();
+//		}
+	}
+
+	static void checkSame() {
+		for (int row = 0; row < 8; row++) {
+			for (int col = 0; col < 8; col++) {
+				for (int direction = 0; direction < 4; direction++) {
+					int count = 0;
+					for (int forCount = 0; forCount < 5; forCount++) {
+						int nextRow = row + deltaRow[direction] * forCount;
+						int nextCol = col + deltaCol[direction] * forCount;
+						if (nextRow >= 0 && nextRow < panSize && nextCol >= 0 && nextCol < panSize
+								&& omokPan[nextRow][nextCol] == 'o') {
+							count++;
+						}
+					}
+					if (count == 5) {
+						yesOrNo = true;
+					}
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+	}
+}

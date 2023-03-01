@@ -2,81 +2,90 @@ package day2016;
 
 import java.util.Scanner;
 
-public class SWEA_1210_Ladder1_정유준 {
+public class LadderAnswer {
 	static Scanner sc = new Scanner(System.in);
-	static int[][] ladder = new int[100][100];
-	static int[] xWay = { 0, 1, -1 };
-	static int[] yWay = { 1, 0, 0 };
-	static int direction = 0;
-	static int x;
-	static int y;
-	static int answer;
+	static int[] deltaRow = { -1, 0, 0 };
+	static int[] deltaCol = { 0, -1, 1 };
+
+	static final int UP = 0;
+	static final int LEFT = 1;
+	static final int RIGHT = 2;
+
+	static int[][] map;
+	static int endRow;
+	static int endCol;
 
 	static void input() {
-		int testCase = sc.nextInt();
-		for (int yidx = 0; yidx < 100; yidx++) {
-			for (int xidx = 0; xidx < 100; xidx++) {
-				ladder[yidx][xidx] = sc.nextInt();
+		// 테스트 케이스 번호
+		int testCaseNum = sc.nextInt();
+
+		map = new int[100][100];
+
+		for (int row = 0; row < 100; row++) {
+			for (int col = 0; col < 100; col++) {
+				map[row][col] = sc.nextInt();
+
+				// 종료위치면 해당 위치를 담아둔다.
+				if (map[row][col] == 2) {
+					endRow = row;
+					endCol = col;
+				}
 			}
 		}
 	}
 
 	static void findWay() {
-		for (int idx = 0; idx < 100; idx++) {
-			x = idx;
-			y = 0;
-			if (ladder[0][x] == 1) {
-				while (y != 99) {
-					findDirection();
-					x += xWay[direction];
-					y += yWay[direction];
+		int direction = UP;
+
+		// 마지막 도착하는 곳이 출발점.
+		// 출발점이라는 것은 어떻게 알아야 할까? -> row = 0
+
+		int nextRow = endRow;
+		int nextCol = endCol;
+
+		while (nextRow != 0) {
+			// 다음 좌표로 이동을 해보자
+			nextRow = endRow + deltaRow[direction];
+			nextCol = endCol + deltaCol[direction];
+
+			// 위로 올라가면서
+			// 왼쪽이나 오른쪽으로 갈 수 있는지 확인해야함
+			if (direction == UP) {
+				// 왼쪽에 1이 있으면 왼쪽으로 가야한다.
+				if (nextCol > 0 && map[nextRow][nextCol - 1] == 1) {
+					direction = LEFT;
+				}
+
+				// 오른쪽에 1이 있으면 오른쪽으로 가야한다.
+				if (nextCol < 99 && map[nextRow][nextCol + 1] == 1) {
+					direction = RIGHT;
 				}
 			}
-			if (ladder[99][x] == 2) {
-				answer = idx;
-				break;
+			// 왼쪽으로 가는 상태 / 오른쪽으로 가능 상태
+			// 위로 갈 수 있는지 확인
+			else if (direction == LEFT || direction == RIGHT) {
+				// 위로 갈 수 있다.
+				if (map[nextRow - 1][nextCol] == 1) {
+					direction = UP;
+				}
 			}
-		}
-	}
 
-	static void findDirection() {
-		// 왼쪽 끝에서 오른쪽이 1인경우 -> 오른쪽으로
-		if (x == 0 && ladder[y][1] == 1) {
-			direction = 1;
-			// 왼쪽 끝에서 오른쪽이 1이 아닌경우 -> 아래로
-		} else if (x == 0 && ladder[y][1] == 0) {
-			direction = 0;
-			// 오른쪽 끝에서 왼쪽이 1인경우 -> 왼쪽으로
-		} else if (x == 99 & ladder[y][98] == 1) {
-			direction = 2;
-			// 오른쪽 끝에서 왼쪽이 1이 아닌경우 -> 아래로
-		} else if (x == 99 && ladder[y][98] == 0) {
-			direction = 0;
-			// 양쪽 사이드가 아닌 곳에서의 방향찾기
-		} else if (x != 99 && x != 0) {
-			if (ladder[y][x + 1] == 1) {
-				direction = 1;
-			} else if (ladder[y][x - 1] == 1) {
-				direction = 2;
-			} else if (ladder[y][x + 1] != 1 && ladder[y][x - 1] != 1) {
-				direction = 0;
-			}
+			// 좌표 갱신해주어야함
+			endRow = nextRow;
+			endCol = nextCol;
 		}
 	}
 
 	static void solve() {
-		for (int idx = 1; idx < 11; idx++) {
+		for (int tc = 1; tc <= 10; tc++) {
 			input();
 			findWay();
-			System.out.println("#" + idx + " " + answer);
+			System.out.println("#" + tc + " " + endCol);
 		}
 	}
 
 	public static void main(String[] args) {
+		// 도착점부터 시작하면 한번에 답을 알 수 있다.
 		solve();
-		sc.close();
-		// 문제를 알았다.
-		// 좌우 반복(왔다갔다)를 해버린다.
-		// 어떻게해야할까
 	}
 }

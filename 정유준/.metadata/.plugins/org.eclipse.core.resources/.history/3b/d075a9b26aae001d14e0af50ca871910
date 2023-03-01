@@ -1,0 +1,12 @@
+package day0217;
+
+import java.util.Scanner;
+
+public class SWEA_1215_회문1_정유준 {
+
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+	}
+}
