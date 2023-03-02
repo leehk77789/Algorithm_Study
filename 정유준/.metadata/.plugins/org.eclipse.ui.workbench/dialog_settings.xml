@@ -26,9 +26,11 @@
 	</section>
 	<section name="PreferencesExportWizard">
 		<item value="C:\Users\SSAFY\Desktop\eclipseSetting.epf" key=""/>
+		<item value="C:\Users\SSAFY\Desktop\eclipsesetting.epf" key=""/>
 		<item value="false" key="WizardPreferencesExportPage1.STORE_OVERWRITE_EXISTING_FILES_ID"/>
-		<item value="false" key="WizardPreferencesExportPage1.EXPORT_ALL_PREFERENCES_ID"/>
+		<item value="true" key="WizardPreferencesExportPage1.EXPORT_ALL_PREFERENCES_ID"/>
 		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\SSAFY\Desktop\eclipsesetting.epf"/>
 			<item value="C:\Users\SSAFY\Desktop\eclipseSetting.epf"/>
 		</list>
 		<list key="WizardPreferencesExportPage1.TRANSFER_PREFERENCES_NAMES_ID">

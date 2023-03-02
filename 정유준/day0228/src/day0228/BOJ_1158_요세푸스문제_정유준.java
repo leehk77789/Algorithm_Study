@@ -21,9 +21,9 @@ public class BOJ_1158_요세푸스문제_정유준 {
 					int a = human.remove();
 
 					if (human.size() == 0) {
-						System.out.println(a);
+						System.out.print(a);
 					} else {
-						System.out.println(a + ",");
+						System.out.print(a + ", ");
 					}
 				} else {
 					human.add(human.remove());
