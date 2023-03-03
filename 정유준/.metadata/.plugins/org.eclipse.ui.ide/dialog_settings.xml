@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\SSAFY\Desktop\Algorithm\정유준"/>
+	</list>
 	<section name="CleanDialogSettings">
 		<item value="500" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
@@ -8,6 +11,8 @@
 		<item value="1190" key="DIALOG_X_ORIGIN"/>
 		<item value="252" key="DIALOG_Y_ORIGIN"/>
 	</section>
+	<section name="ExternalProjectImportWizard">
+	</section>
 	<section name="WORKBENCH_SETTINGS">
 		<list key="ENABLED_TRANSFERS">
 		</list>
@@ -15,7 +20,6 @@
 	<section name="NewWizardAction">
 		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.jdt.ui.java"/>
 		</list>
 	</section>
 	<section name="ChooseWorkspaceDialogSettings">

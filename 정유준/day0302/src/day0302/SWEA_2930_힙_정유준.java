@@ -55,7 +55,12 @@ public class SWEA_2930_힙_정유준 {
 
 					// 현재 루트 노드의 값을 출력
 					// 루트 노드 : arr[1]
-					System.out.print(" " + arr[1]);
+					if (arr[1] != 0) {
+						System.out.print(" " + arr[1]);
+					} else if (arr[1] == 0) {
+						System.out.print(" " + -1);
+						continue;
+					}
 
 					// 마지막 원소를 루트 노드로 옮겨야한다.
 					// 마지막 원소 : arr[lastIdx]
