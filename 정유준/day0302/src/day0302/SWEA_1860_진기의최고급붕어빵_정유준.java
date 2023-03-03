@@ -2,24 +2,13 @@ package day0302;
 
 import java.util.Scanner;
 
-<<<<<<< HEAD
-=======
-/**
- * SWEA_1860_진기의최고급붕어빵_정유준
- */
->>>>>>> 86512061705a3454e8ec28e73be6fea781c3243c
 public class SWEA_1860_진기의최고급붕어빵_정유준 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-<<<<<<< HEAD
 		int humanNum = sc.nextInt();
 		int makeTime = sc.nextInt();
 		int makeAmount = sc.nextInt();
-
-	}
-}
-=======
 
 		int testCase = sc.nextInt();
 		for (int idx = 1; idx <= testCase; idx++) {
@@ -65,4 +54,3 @@ public class SWEA_1860_진기의최고급붕어빵_정유준 {
 		}
 	}
 }
->>>>>>> 86512061705a3454e8ec28e73be6fea781c3243c
