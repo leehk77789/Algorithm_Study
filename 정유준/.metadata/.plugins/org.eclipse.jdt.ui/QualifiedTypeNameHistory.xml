@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="javax.swing.Popup"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
@@ -41,4 +42,44 @@
 <fullyQualifiedTypeName name="com.sun.xml.internal.org.jvnet.fastinfoset.stax.LowLevelFastInfosetStreamWriter"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+=======
+    <fullyQualifiedTypeName name="javax.swing.Popup"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="java.lang.Character"/>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="test04.Test3"/>
+    <fullyQualifiedTypeName name="test04.nameComparator"/>
+    <fullyQualifiedTypeName name="test04.NameComparator"/>
+    <fullyQualifiedTypeName name="test03.Test3"/>
+    <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="day0223.Stack"/>
+    <fullyQualifiedTypeName name="sun.nio.cs.ext.ISCII91"/>
+    <fullyQualifiedTypeName name="org.omg.CORBA.PUBLIC_MEMBER"/>
+    <fullyQualifiedTypeName name="java.lang.Void"/>
+    <fullyQualifiedTypeName name="java.lang.InstantiationError"/>
+    <fullyQualifiedTypeName name="day0223.SWEA_1225_암호생성기_정유준.Queue"/>
+    <fullyQualifiedTypeName name="javax.xml.crypto.Data"/>
+    <fullyQualifiedTypeName name="java.text.spi.DateFormatProvider"/>
+    <fullyQualifiedTypeName name="sun.applet.AppletClassLoader"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.function.IntSupplier"/>
+    <fullyQualifiedTypeName name="jdk.nashorn.internal.runtime.regexp.joni.constants.Traverse"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.CountDownLatch"/>
+    <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="day0228.BOJ_1158_요세푸스문제_정유준.Queue"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
+    <fullyQualifiedTypeName name="sun.security.krb5.SCDynamicStoreConfig"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.SWAP"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.security.utils.UnsyncBufferedOutputStream"/>
+>>>>>>> 86512061705a3454e8ec28e73be6fea781c3243c
 </qualifiedTypeNameHistroy>
