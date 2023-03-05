@@ -2,13 +2,13 @@ gpackage day0302;
 
 import java.util.Scanner;
 
-/**
- * SWEA_1860_진기의최고급붕어빵_정유준
- */
 public class SWEA_1860_진기의최고급붕어빵_정유준 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		int humanNum = sc.nextInt();
+		int makeTime = sc.nextInt();
+		int makeAmount = sc.nextInt();
 
 		int testCase = sc.nextInt();
 		for (int idx = 1; idx <= testCase; idx++) {
