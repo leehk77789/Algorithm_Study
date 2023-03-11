@@ -4,12 +4,12 @@
 		<item value="C:\Users\SSAFY\Desktop\Algorithm\정유준"/>
 	</list>
 	<section name="CleanDialogSettings">
-		<item value="500" key="DIALOG_WIDTH"/>
-		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
-		<item value="false" key="TOGGLE_SELECTED"/>
-		<item value="402" key="DIALOG_HEIGHT"/>
-		<item value="1190" key="DIALOG_X_ORIGIN"/>
-		<item value="252" key="DIALOG_Y_ORIGIN"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		<item key="TOGGLE_SELECTED" value="false"/>
+		<item key="DIALOG_HEIGHT" value="402"/>
+		<item key="DIALOG_X_ORIGIN" value="1190"/>
+		<item key="DIALOG_Y_ORIGIN" value="252"/>
 	</section>
 	<section name="ExternalProjectImportWizard">
 	</section>
@@ -18,12 +18,12 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 		</list>
 	</section>
 	<section name="ChooseWorkspaceDialogSettings">
-		<item value="173" key="DIALOG_X_ORIGIN"/>
-		<item value="336" key="DIALOG_Y_ORIGIN"/>
+		<item key="DIALOG_X_ORIGIN" value="173"/>
+		<item key="DIALOG_Y_ORIGIN" value="336"/>
 	</section>
 </section>
