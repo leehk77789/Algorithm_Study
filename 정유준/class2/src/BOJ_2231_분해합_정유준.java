@@ -1,4 +1,3 @@
-package class2;
 
 import java.util.Scanner;
 
@@ -24,7 +23,7 @@ public class BOJ_2231_분해합_정유준 {
 				break;
 			}
 		}
-		if(!flag) {
+		if (!flag) {
 			System.out.println(0);
 		}
 	}
