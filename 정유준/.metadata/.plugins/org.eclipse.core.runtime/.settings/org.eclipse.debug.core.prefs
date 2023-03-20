@@ -1,6 +1,5 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=5773583275a0d2306392e4db0a183bfb47d96e93
 eclipse.preferences.version=1
-<<<<<<< HEAD
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="arr[row][height]"/>\r\n</watchExpressions>\r\n
-=======
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n    <expression enabled\="true" text\="map[col][row]"/>\r\n    <expression enabled\="true" text\="col"/>\r\n    <expression enabled\="true" text\="row"/>\r\n</watchExpressions>\r\n
->>>>>>> 5773583275a0d2306392e4db0a183bfb47d96e93
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="map[col][row]"/>\r\n<expression enabled\="true" text\="col"/>\r\n<expression enabled\="true" text\="row"/>\r\n</watchExpressions>\r\n
