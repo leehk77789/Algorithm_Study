@@ -4,7 +4,7 @@
 <<<<<<<=HEAD
 >>>>>>>=0710daf50d8dcbd4370484f0bef3f385b2c18edb
 EDITION_COLOR=238,238,238
-PLUGINS_NOT_ACTIVATED_ON_STARTUP=org.eclipse.m2e.discovery;
+PLUGINS_NOT_ACTIVATED_ON_STARTUP=;org.eclipse.m2e.discovery;
 REMOTE_COMMANDS_VIEW_FONT=1|Consolas|14.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
 eclipse.preferences.version=1
 org.eclipse.compare.contentmergeviewer.TextMergeViewer=1|Consolas|14.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
