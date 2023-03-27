@@ -40,6 +40,7 @@ public class BOJ_1018_체스판다시칠하기_정유준 {
 		for (int idx = 0; idx < 4; idx++) {
 			nRow = row + dRow[idx];
 			nCol = col + dCol[idx];
+			if(nRow <=)
 		}
 	}
 
