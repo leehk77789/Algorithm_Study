@@ -2,7 +2,7 @@
 <<<<<<<=HEAD
 >>>>>>>=5773583275a0d2306392e4db0a183bfb47d96e93
 content_assist_add_import=true
-content_assist_autoactivation_triggers_java=<\=$\:{.@qwertyuioplkjhgfdsazxcvbnm_QWERTYUIOPLKJHGFDSAZXCVBNM
+content_assist_autoactivation_triggers_java=<$\:{.@qwertyuioplkjhgfdsazxcvbnm_QWERTYUIOPLKJHGFDSAZXCVBNM
 content_assist_completion_replacement_background=200,200,0
 content_assist_completion_replacement_foreground=200,0,0
 content_assist_disable_completion_trigger_chars=true
@@ -34,10 +34,17 @@ java_string=23,198,163
 matchingBracketsColor=249,250,244
 org.eclipse.jdt.internal.ui.navigator.layout=2
 org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.exception.name=e
 org.eclipse.jdt.ui.formatterprofiles.version=22
+org.eclipse.jdt.ui.gettersetter.use.is=true
+org.eclipse.jdt.ui.ignorelowercasenames=true
+org.eclipse.jdt.ui.importorder=java;javax;org;com;
+org.eclipse.jdt.ui.ondemandthreshold=99
+org.eclipse.jdt.ui.overrideannotation=true
+org.eclipse.jdt.ui.staticondemandthreshold=99
 org.eclipse.jdt.ui.text.code_templates_migrated=true
 org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
-org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="java" deleted\="false" description\="" enabled\="true" name\="sc">${\:import(java.util.Scanner)}&\#13;\r\nstatic Scanner sc \= new Scanner(System.in);</template></templates>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="java" deleted\="false" description\="" enabled\="true" name\="sc">${\:import(java.util.Scanner)}&\#13;\r\nstatic Scanner sc \= new Scanner(System.in);</template><template autoinsert\="true" context\="java" deleted\="false" description\="basic" enabled\="true" name\="bu">static BufferedReader br \= new BufferedReader(new InputStreamReader(System.in));&\#13;\r\n&\#13;\r\n\tstatic void input() throws NumberFormatException, IOException {&\#13;\r\n&\#13;\r\n\t}&\#13;\r\n&\#13;\r\n\tstatic void solve() throws NumberFormatException, IOException {&\#13;\r\n\t\tinput();&\#13;\r\n\t}&\#13;\r\n&\#13;\r\n\tpublic static void main(String[] args) throws NumberFormatException, IOException {&\#13;\r\n\t\tsolve();&\#13;\r\n\t}</template></templates>
 org.eclipse.jdt.ui.text.templates_migrated=true
 org.eclipse.jdt.ui.visibility.order=B,V,R,D,
 outlinesortoption=T,SF,SI,SM,F,I,C,M,
