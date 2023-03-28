@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+<<<<<<< HEAD
 	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="1"/>
 	<item key="org.eclipse.jdt.ui.last.selected.project.jre" value="zulu-8"/>
+=======
+	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
+	<item value="3" key="TypeHierarchyViewPart.orientation"/>
+	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
+	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
+	<item value="1" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
+	<item value="zulu-8" key="org.eclipse.jdt.ui.last.selected.project.jre"/>
+>>>>>>> f341ed7f3623dd3f8a96e5a67172c63d3edd8db5
 	<section name="RefactoringWizard.preview">
 		<item key="width" value="600"/>
 		<item key="height" value="400"/>
