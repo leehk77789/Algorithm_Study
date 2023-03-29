@@ -48,10 +48,6 @@ public class BOJ_20040_사이클게임_정유준 {
 		x = find(x);
 		y = find(y);
 
-		if (x == y) {
-			return;
-		}
-
 		if (x > y) {
 			par[y] = x;
 		} else {
@@ -64,7 +60,7 @@ public class BOJ_20040_사이클게임_정유준 {
 			return x;
 		}
 
-		return find(par[x]);
+		return par[x] = find(par[x]);
 	}
 
 	static void findAnswer() {
@@ -72,6 +68,9 @@ public class BOJ_20040_사이클게임_정유준 {
 		for (int i = 0; i < link.length; i++) {
 			union(link[i][0], link[i][1]);
 			System.out.println(Arrays.toString(par));
+			for (int j = 1; j <= par.length - 1; j++) {
+				find(par[j]);
+			}
 			for (int j = 1; j <= par.length - 1; j++) {
 				if (answer != par[j]) {
 					break;
