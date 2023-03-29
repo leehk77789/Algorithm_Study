@@ -1,36 +1,42 @@
+package day0329;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Stack;
 
-public class BOJ_9012_괄호_정유준 {
+public class SWEA_7465_창용마을무리의개수_정유준 {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	static Stack<String> arr;
+	static int[] parentList;
+	static int[][] connect;
 
 	static void input() throws NumberFormatException, IOException {
 		String[] input = br.readLine().split(" ");
-		arr = new Stack<>();
-		for (int i = 0; i < input.length; i++) {
-			arr.add(input[i]);
+		int people = Integer.parseInt(input[0]);
+		int line = Integer.parseInt(input[1]);
+		parentList = new int[people + 1];
+		for (int idx = 0; idx < people + 1; idx++) {
+			parentList[idx] = idx;
 		}
+		linkList
 	}
 
-	static void check() {
-		while (true) {
-			if()
-		}
+	// 대표찾기
+	static int find(int x) {
+	}
+
+	// 병합시키기
+	static void union(int x, int y) {
 	}
 
 	static void solve() throws NumberFormatException, IOException {
 		int testCase = Integer.parseInt(br.readLine());
 		for (int tc = 1; tc <= testCase; tc++) {
 			input();
-			arr.clear();
+			findLink();
 		}
 	}
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		solve();
 	}
-
 }
