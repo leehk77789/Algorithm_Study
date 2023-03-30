@@ -8,6 +8,7 @@ import java.util.Comparator;
 
 public class BOJ_20040_사이클게임_정유준 {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static StringBuilder sb = new StringBuilder();
 	static int[] par;
 	static String[] input;
 	static int[][] link;
@@ -44,15 +45,19 @@ public class BOJ_20040_사이클게임_정유준 {
 //		}
 	}
 
-	static void union(int x, int y) {
+	static boolean union(int x, int y) {
 		x = find(x);
 		y = find(y);
 
+		if (x == y) {
+			return false;
+		}
 		if (x > y) {
 			par[y] = x;
 		} else {
 			par[x] = y;
 		}
+		return true;
 	}
 
 	static int find(int x) {
@@ -75,17 +80,19 @@ public class BOJ_20040_사이클게임_정유준 {
 				if (answer != par[j]) {
 					break;
 				} else {
+					sb.append(i + 1);
 					System.out.println(i + 1);
 					return;
 				}
 			}
 		}
-		System.out.println(0);
+		sb.append(0);
 	}
 
 	static void solve() throws NumberFormatException, IOException {
 		input();
 		findAnswer();
+		System.out.println(sb);
 	}
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
