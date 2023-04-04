@@ -8,197 +8,167 @@ public class SWEA_5650_핀볼게임_정유준 {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static StringBuilder sb = new StringBuilder();
 	static String[] input;
-	static int size;
 	static int[][] map;
-	// 상 우 하 좌
-	static int[] rIdx = { -1, 0, 1, 0 };
-	static int[] cIdx = { 0, 1, 0, -1 };
-	static int originalRow;
-	static int originalCol;
-	static int count;
+
+	static int[] ridx = { 0, 1, 0, -1 };
+	static int[] cidx = { 1, 0, -1, 0 };
+	static int originR;
+	static int originC;
 	static int maxCount;
-	static int[] now;
+	static int size;
+	static int[][][] hole;
+	static int idx;
 
 	static void input() throws NumberFormatException, IOException {
-		originalRow = 0;
-		originalCol = 0;
-		maxCount = Integer.MIN_VALUE;
-		now = new int[2];
+		maxCount = 0;
+		size = Integer.parseInt(br.readLine().trim());
 
-		size = Integer.parseInt(br.readLine());
+		map = new int[size + 1][size + 1];
+		hole = new int[11][2][2];
 
-		map = new int[size][size];
-		for (int r = 0; r < size; r++) {
-			input = br.readLine().split(" ");
-			for (int c = 0; c < size; c++) {
-				map[r][c] = Integer.parseInt(input[c]);
+		// 값넣기
+		for (int r = 1; r <= size; r++) {
+			input = br.readLine().trim().split(" ");
+			for (int c = 1; c <= size; c++) {
+				map[r][c] = Integer.parseInt(input[c - 1]);
+				if (map[r][c] >= 6) {
+					if (hole[map[r][c]][0][0] == 0) {
+						hole[map[r][c]][0][0] = r;
+						hole[map[r][c]][0][1] = c;
+					} else {
+						hole[map[r][c]][1][0] = r;
+						hole[map[r][c]][1][1] = c;
+					}
+				}
 			}
 		}
+//		System.out.println(Arrays.toString(hole[6][0]));
+//		System.out.println(Arrays.toString(hole[6][1]));
+//		System.out.println(Arrays.toString(hole[7][0]));
+//		System.out.println(Arrays.toString(hole[7][1]));
+
+//		for (int i = 1; i <= size; i++) {
+//			for (int j = 1; j <= size; j++) {
+//				System.out.print(map[i][j] + " ");
+//			}
+//			System.out.println();
+//		}
 	}
 
 	static void bruteForce() {
-		for (int r = 0; r < size; r++) {
-			for (int c = 0; c < size; c++) {
-				if (map[r][c] == 0) {
-					for (int idx = 0; idx < 4; idx++) {
-						count = 0;
-						originalRow = r;
-						originalCol = c;
-						playGame(r, c, idx);
+		for (int row = 1; row <= size; row++) {
+			for (int col = 1; col <= size; col++) {
+				if (map[row][col] == 0) {
+					originR = row;
+					originC = col;
+					for (int i = 0; i < 4; i++) {
+						idx = i;
+						pinball(row, col);
 					}
 				}
 			}
 		}
 	}
 
-	private static void playGame(int row, int col, int idx) {
-		// 끝내는 조건
-		// 1. 처음시작이 아닌 상태에서 다시 시작점으로 돌아옴
-		// 2. 블랙홀을 만남
-		if ((originalRow == row && originalCol == col && count != 0) || map[row][col] == -1) {
-			if (count > maxCount) {
-				maxCount = count;
+	private static void pinball(int row, int col) {
+		int count = 0;
+		int originIdx = idx;
+		while (true) {
+			row += ridx[idx];
+			col += cidx[idx];
+//			System.out.println("현재 방향 : " + idx);
+//			System.out.println("최초 시작점 row : " + originR + ", col : " + originC + "최초 시작방향 : " + originIdx);
+//			System.out.println("현재 위치 row : " + row + ", col : " + col);
+			if (row < 1 || col < 1 || row > size || col > size) {
+				count++;
+				idx = (idx + 2) % 4;
+				continue;
 			}
-			return;
-		}
 
-		int nR = row + rIdx[idx];
-		int nC = col + cIdx[idx];
-		// 범위 안에 다음값이 존재하면 진행 아니면 리턴
-		if (nR >= 0 && nC >= 0 && nR < size && nC < size) {
-			row = nR;
-			col = nC;
-			if (map[row][col] == 1) {
-				count++;
-				idx = oneBlock(idx);
-
-				nR = row + rIdx[idx];
-				nC = col + cIdx[idx];
-
-				if (nR >= 0 && nC >= 0 && nR < size && nC < size) {
-					playGame(nR, nC, idx);
-				} else {
-					return;
-				}
-			} else if (map[row][col] == 2) {
-				count++;
-				idx = twoBlock(idx);
-				nR = row + rIdx[idx];
-				nC = col + cIdx[idx];
-				if (nR >= 0 && nC >= 0 && nR < size && nC < size) {
-					playGame(nR, nC, idx);
-				} else {
-					return;
-				}
-			} else if (map[row][col] == 3) {
-				count++;
-				idx = threeBlock(idx);
-				nR = row + rIdx[idx];
-				nC = col + cIdx[idx];
-				if (nR >= 0 && nC >= 0 && nR < size && nC < size) {
-					playGame(nR, nC, idx);
-				} else {
-					return;
-				}
-			} else if (map[row][col] == 4) {
-				count++;
-				idx = fourBlock(idx);
-				nR = row + rIdx[idx];
-				nC = col + cIdx[idx];
-				if (nR >= 0 && nC >= 0 && nR < size && nC < size) {
-					playGame(nR, nC, idx);
-				} else {
-					return;
-				}
-				count--;
-			} else if (map[row][col] == 5) {
-				count++;
-				idx = fiveBlock(idx);
-				nR = row + rIdx[idx];
-				nC = col + cIdx[idx];
-				if (nR >= 0 && nC >= 0 && nR < size && nC < size) {
-					playGame(nR, nC, idx);
-				} else {
-					return;
-				}
-			} else if (map[row][col] == 6 || map[row][col] == 7 || map[row][col] == 8 || map[row][col] == 9
-					|| map[row][col] == 10) {
-				count++;
-				playGame(now[0], now[1], idx);
+			if (row == originR && col == originC) {
+				maxCount = Math.max(maxCount, count);
+				break;
 			}
-		} else {
-			idx = (idx + 2) % 4;
-			playGame(row, col, idx);
-		}
-	}
 
-	// 상 우 하 좌
-	static int oneBlock(int idx) {
-		if (idx == 0) {
-			return 2;
-		} else if (idx == 1) {
-			return 3;
-		} else if (idx == 2) {
-			return 1;
-		} else {
-			return 0;
-		}
-	}
+			if (map[row][col] == -1) {
+				maxCount = Math.max(maxCount, count);
+				break;
+			}
 
-	static int twoBlock(int idx) {
-		if (idx == 0) {
-			return 1;
-		} else if (idx == 1) {
-			return 3;
-		} else if (idx == 2) {
-			return 0;
-		} else {
-			return 2;
-		}
-	}
+			if (1 <= map[row][col] && map[row][col] <= 5) {
+				count++;
+				block(row, col);
+				continue;
+			}
 
-	static int threeBlock(int idx) {
-		if (idx == 0) {
-			return 3;
-		} else if (idx == 1) {
-			return 2;
-		} else if (idx == 2) {
-			return 0;
-		} else {
-			return 1;
-		}
-	}
-
-	static int fourBlock(int idx) {
-		if (idx == 0) {
-			return 2;
-		} else if (idx == 1) {
-			return 0;
-		} else if (idx == 2) {
-			return 3;
-		} else {
-			return 1;
-		}
-	}
-
-	static int fiveBlock(int idx) {
-		return (idx + 2) % 4;
-	}
-
-	static void warmHole(int row, int col, int num) {
-
-		for (int i = 0; i < size; i++) {
-			for (int j = 0; j < size; j++) {
-				if (map[i][j] == num && i != row && i != col) {
-					now[0] = i;
-					now[1] = j;
+			if (map[row][col] > 5) {
+				int a = map[row][col];
+				if (row == hole[a][0][0] && col == hole[a][0][1]) {
+					row = hole[a][1][0];
+					col = hole[a][1][1];
+				} else {
+					row = hole[a][0][0];
+					col = hole[a][0][1];
 				}
 			}
+		}
+	}
+
+	static void block(int row, int col) {
+		if (map[row][col] == 1) {
+			if (idx == 0)
+				idx = 2;
+			else if (idx == 1)
+				idx = 0;
+			else if (idx == 2)
+				idx = 3;
+			else if (idx == 3)
+				idx = 1;
+
+		} else if (map[row][col] == 2) {
+			if (idx == 0)
+				idx = 2;
+			else if (idx == 1)
+				idx = 3;
+			else if (idx == 2)
+				idx = 1;
+			else if (idx == 3)
+				idx = 0;
+
+		} else if (map[row][col] == 3) {
+			if (idx == 0)
+				idx = 1;
+			else if (idx == 1)
+				idx = 3;
+			else if (idx == 2)
+				idx = 0;
+			else if (idx == 3)
+				idx = 2;
+
+		} else if (map[row][col] == 4) {
+			if (idx == 0)
+				idx = 3;
+			else if (idx == 1)
+				idx = 2;
+			else if (idx == 2)
+				idx = 0;
+			else if (idx == 3)
+				idx = 1;
+
+		} else if (map[row][col] == 5) {
+			if (idx == 0)
+				idx = 2;
+			else if (idx == 1)
+				idx = 3;
+			else if (idx == 2)
+				idx = 0;
+			else if (idx == 3)
+				idx = 1;
 		}
 	}
 
 	static void solve() throws NumberFormatException, IOException {
-		int testCase = Integer.parseInt(br.readLine());
+		int testCase = Integer.parseInt(br.readLine().trim());
 		for (int tc = 1; tc <= testCase; tc++) {
 			input();
 			bruteForce();
