@@ -38,12 +38,18 @@ public class BOJ_18111_마인크래프트_정유준 {
 				}
 			}
 		}
+
+//		for (int i = 0; i < row; i++) {
+//			for (int j = 0; j < col; j++) {
+//				System.out.print(map[i][j] + " ");
+//			}
+//			System.out.println();
+//		}
 	}
 
 	static void find() {
 		for (int i = min; i <= max; i++) {
 			int curr = check(i);
-			System.out.println(i + "의 소요시간 : " + curr);
 			if (curr < sum) {
 				sum = curr;
 				answer = i;
@@ -62,24 +68,28 @@ public class BOJ_18111_마인크래프트_정유준 {
 
 		for (int a = 0; a < row; a++) {
 			for (int b = 0; b < col; b++) {
-				if (nowSum > sum) {
-					return Integer.MAX_VALUE;
-				}
-				if (left <= -1) {
-					return Integer.MAX_VALUE;
-				}
 				if (map[a][b] > i) {
 					nowSum += (map[a][b] - i) * 2;
 					left += (map[a][b] - i);
-					System.out.println(nowSum);
+					if (nowSum > sum) {
+						return Integer.MAX_VALUE;
+					}
 				} else if (map[a][b] < i) {
-					System.out.println(nowSum);
 					nowSum += (i - map[a][b]);
 					left -= (i - map[a][b]);
+					if (nowSum > sum) {
+						return Integer.MAX_VALUE;
+					}
+				} else {
+					continue;
 				}
 			}
 		}
-		return nowSum;
+		if (left <= -1) {
+			return Integer.MAX_VALUE;
+		} else {
+			return nowSum;
+		}
 	}
 
 	static void solve() throws NumberFormatException, IOException {
