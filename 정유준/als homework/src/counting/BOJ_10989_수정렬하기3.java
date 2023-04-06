@@ -19,9 +19,11 @@ public class BOJ_10989_수정렬하기3 {
 
 		for (int i = 0; i < num; i++) {
 			arr[i] = Integer.parseInt(br.readLine());
-
+			if (arr[i] > max) {
+				max = arr[i];
+			}
 		}
-		count = new int[num];
+		count = new int[max + 1];
 	}
 
 	static void countingSort() {
